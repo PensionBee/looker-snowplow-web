@@ -1,4 +1,4 @@
-# connection: "@{connection}"
+connection: "@{connection}"
 
 # label: "Snowplow Looker Model"
 
