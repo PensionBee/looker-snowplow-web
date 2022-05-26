@@ -2,14 +2,16 @@ connection: "@{connection}"
 
 # label: "Snowplow Looker Model"
 
-# include: "/views/*.view"
+include: "/views/*.view"
 # include: "/dashboards/*.dashboard.lookml"
 
 # # datagroup: snowplow_looker_default_datagroup {
 # #   max_cache_age: "1 hour"
 # # }
 
-# # persist_with: snowplow_looker_default_datagroup
+# persist_with: snowplow_looker_default_datagroup
+
+explore: events {}
 
 # explore: sessions {
 #   label: "Sessions"
@@ -21,7 +23,7 @@ connection: "@{connection}"
 # }
 
 # explore: page_views {
-#   label: "Page Views"
+#   label: "Website Analytics"
 #   join: sessions {
 #     type:  left_outer
 #     relationship: many_to_one
@@ -31,6 +33,12 @@ connection: "@{connection}"
 #     type:  left_outer
 #     relationship: many_to_one
 #     sql_on:  ${page_views.domain_userid} = ${users.domain_userid} ;;
+#   }
+#   join: events {
+#     type:  left_outer
+#     relationship: many_to_one
+#     sql_on: ${page_views.domain_sessionid} = ${events.domain_sessionid}
+#             and ${page_views.page_view_id} = ${events.page_view_id} ;;
 #   }
 # }
 
