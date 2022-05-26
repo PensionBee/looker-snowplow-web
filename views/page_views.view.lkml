@@ -17,6 +17,7 @@ view: page_views {
 
 # Engaged TIme
   dimension: absolute_time_in_s {
+    hidden:  yes
     label: "absolute_time_in_s"
     description: "The time in seconds between the start_tstamp and end_tstamp"
     group_label: "Engaged Time"
@@ -27,6 +28,7 @@ view: page_views {
 
 # Agent
   dimension: agent_class {
+    hidden: yes
     label: "agent_class"
     description: "Class of agent e.g. browser"
     group_label: "Agent"
@@ -35,6 +37,7 @@ view: page_views {
   }
 
   dimension: agent_name {
+    hidden: yes
     label: "agent_name"
     description: "Name of agent e.g. Chrome"
     group_label: "Agent"
@@ -43,6 +46,7 @@ view: page_views {
   }
 
   dimension: agent_name_version {
+    hidden: yes
     label: "agent_name_version"
     description: "Name and version of agent e.g. Chrome 53.0.2785.124"
     group_label: "Agent"
@@ -51,6 +55,7 @@ view: page_views {
   }
 
   dimension: agent_name_version_major {
+    hidden: yes
     label: "agent_name_version_major"
     description: "Name and major version of agent e.g. Chrome 53"
     group_label: "Agent"
@@ -59,6 +64,7 @@ view: page_views {
   }
 
   dimension: agent_version {
+    hidden: yes
     label: "agent_version"
     description: "Version of agent e.g. 53.0.2785.124"
     group_label: "Agent"
@@ -67,6 +73,7 @@ view: page_views {
   }
 
   dimension: agent_version_major {
+    hidden: yes
     label: "agent_version_major"
     description: "Major version of agent e.g. 53"
     group_label: "Agent"
@@ -77,6 +84,7 @@ view: page_views {
 
 # App ID
   dimension: app_id {
+    hidden: yes
     label: "app_id"
     description: "Application ID e.g. ‘angry-birds’ is used to distinguish different applications that are being tracked by the same Snowplow stack, e.g. production versus dev."
     group_label: "App ID"
@@ -87,6 +95,7 @@ view: page_views {
 
 # Browser
   dimension: br_colordepth {
+    hidden: yes
     label: "br_colordepth"
     description: "Bit depth of the browser color palette e.g. 24"
     group_label: "Browser"
@@ -95,6 +104,7 @@ view: page_views {
   }
 
   dimension: br_lang {
+    hidden: yes
     label: "br_lang"
     description: "Language the browser is set to e.g. ‘en-GB’"
     group_label: "Browser"
@@ -103,6 +113,7 @@ view: page_views {
   }
 
   dimension: br_renderengine {
+    hidden: yes
     label: "br_renderengine"
     description: "Browser rendering engine e.g. ‘GECKO’"
     group_label: "Browser"
@@ -111,6 +122,7 @@ view: page_views {
   }
 
   dimension: br_viewheight {
+    hidden: yes
     label: "br_viewheight"
     description: "Viewport height e.g. 1000"
     group_label: "Browser"
@@ -119,6 +131,7 @@ view: page_views {
   }
 
   dimension: br_viewwidth {
+    hidden: yes
     label: "br_viewwidth"
     description: "Viewport width e.g. 1000"
     group_label: "Browser"
@@ -129,6 +142,7 @@ view: page_views {
 
 # Category
   dimension: category {
+    hidden: yes
     label: "category"
     description: "Category based on activity if the IP/UA is a spider or robot, BROWSER otherwise"
     group_label: "Category"
@@ -139,6 +153,7 @@ view: page_views {
 
 # Time Stamp
   dimension_group: collector_tstamp {
+    hidden: yes
     label: "collector_tstamp"
     description: "Time stamp for the event recorded by the collector e.g. ‘2013-11-26 00:02:05’"
     group_label: "Time Stamp"
@@ -219,6 +234,7 @@ view: page_views {
 
 # Document
   dimension: doc_height {
+    hidden: yes
     label: "doc_height"
     description: "The page’s height in pixels e.g. 3000"
     group_label: "Document"
@@ -227,6 +243,7 @@ view: page_views {
   }
 
   dimension: doc_width {
+    hidden: yes
     label: "doc_width"
     description: "The page’s width in pixels e.g. 1024"
     group_label: "Document"
@@ -255,6 +272,7 @@ view: page_views {
 
 # User
   dimension: domain_userid {
+    hidden: yes
     label: "domain_userid"
     description: "User ID set by Snowplow using 1st party cookie e.g. ‘bc2e92ec6c204a14’"
     group_label: "User"
@@ -263,6 +281,7 @@ view: page_views {
   }
 
   dimension_group: dvce_created_tstamp {
+    hidden: yes
     label: "dvce_created_tstamp"
     description: "Timestamp event was recorded on the client device e.g. ‘2013-11-26 00:03:57.885’"
     group_label: "Time Stamp"
@@ -281,6 +300,7 @@ view: page_views {
   }
 
   dimension_group: end_tstamp {
+    hidden: yes
     label: "end_tstamp"
     description: "Timestamp for the end of the page view, based on derived_tstamp"
     group_label: "Time Stamp"
@@ -299,6 +319,7 @@ view: page_views {
   }
 
   dimension: engaged_time_in_s {
+    hidden: yes
     label: "engaged_time_in_s"
     description: "Time spent by the user on the page calculated using page pings."
     group_label: "Engaged Time"
@@ -309,6 +330,7 @@ view: page_views {
 
 # Event
   dimension: event_id {
+    hidden: yes
     label: "event_id"
     description: "A UUID for each event e.g. ‘c6ef3124-b53a-4b13-a233-0088f79dcbcb’"
     group_label: "Event"
@@ -335,6 +357,7 @@ view: page_views {
   }
 
   dimension: geo_latitude {
+    hidden: yes
     label: "geo_latitude"
     description: "Visitor location latitude e.g. 37.443604"
     group_label: "Geographical"
@@ -343,6 +366,7 @@ view: page_views {
   }
 
   dimension: geo_longitude {
+    hidden: yes
     label: "geo_longitude"
     description: "Visitor location longitude e.g. -122.4124"
     group_label: "Geographical"
@@ -351,6 +375,7 @@ view: page_views {
   }
 
   dimension: geo_region {
+    hidden: yes
     label: "geo_region"
     description: "ISO-3166-2 code for country region the visitor is in e.g. ‘I9’, ‘TX’"
     group_label: "Geographical"
@@ -367,6 +392,7 @@ view: page_views {
   }
 
   dimension: geo_timezone {
+    hidden: yes
     label: "geo_timezone"
     description: "Visitor timezone name e.g. ‘Europe/London’"
     group_label: "Geographical"
@@ -385,6 +411,7 @@ view: page_views {
 
 # Page Scroll
   dimension: horizontal_percentage_scrolled {
+    hidden: yes
     label: "horizontal_percentage_scrolled"
     description: "Percentage of page scrolled horizontally"
     group_label: "Page Scroll"
@@ -393,6 +420,7 @@ view: page_views {
   }
 
   dimension: horizontal_pixels_scrolled {
+    hidden: yes
     label: "horizontal_pixels_scrolled"
     description: "Distance the user scrolled horizontally in pixels"
     group_label: "Page Scroll"
@@ -403,6 +431,7 @@ view: page_views {
 
 # Layout
   dimension: layout_engine_class {
+    hidden: yes
     label: "layout_engine_class"
     description: "Class of layout engine e.g. Browser"
     group_label: "Layout"
@@ -411,6 +440,7 @@ view: page_views {
   }
 
   dimension: layout_engine_name {
+    hidden: yes
     label: "layout_engine_name"
     description: "Name of layout engine e.g. Blink"
     group_label: "Layout"
@@ -419,6 +449,7 @@ view: page_views {
   }
 
   dimension: layout_engine_name_version {
+    hidden: yes
     label: "layout_engine_name_version"
     description: "Name and version of layout engine e.g. Blink 53.0"
     group_label: "Layout"
@@ -427,6 +458,7 @@ view: page_views {
   }
 
   dimension: layout_engine_name_version_major {
+    hidden: yes
     label: "layout_engine_name_version_major"
     description: "Name and major version of layout engine e.g. Blink 53"
     group_label: "Layout"
@@ -435,6 +467,7 @@ view: page_views {
   }
 
   dimension: layout_engine_version {
+    hidden: yes
     label: "layout_engine_version"
     description: "Version of layout engine e.g. 53.0"
     group_label: "Layout"
@@ -443,6 +476,7 @@ view: page_views {
   }
 
   dimension: layout_engine_version_major {
+    hidden: yes
     label: "layout_engine_version_major"
     description: "Major version of layout engine e.g. 53"
     group_label: "Layout"
@@ -509,6 +543,7 @@ view: page_views {
   }
 
   dimension: network_userid {
+    hidden: yes
     label: "network_userid"
     description: "User ID set by Snowplow using 3rd party cookie e.g. ‘ecdff4d0-9175-40ac-a8bb-325c49733607’"
     group_label: "User"
@@ -591,6 +626,7 @@ view: page_views {
   }
 
   dimension: os_timezone {
+    hidden: yes
     label: "os_timezone"
     description: "Client operating system timezone e.g. ‘Europe/London’"
     group_label: "OS"
@@ -683,6 +719,7 @@ view: page_views {
   }
 
   dimension: page_views_in_session {
+    hidden: yes
     label: "page_views_in_session"
     description: "Distinct count of page_view_id within a session"
     group_label: "Page Views"
@@ -693,6 +730,7 @@ view: page_views {
 
 # Bots
   dimension: primary_impact {
+    hidden: yes
     label: "primary_impact"
     description: "Whether the spider or robot would affect page impression measurement, ad impression measurement, both or none"
     group_label: "Bots"
@@ -701,6 +739,7 @@ view: page_views {
   }
 
   dimension: reason {
+    hidden: yes
     label: "reason"
     description: "Type of failed check if the IP/UA is a spider or robot, PASSED_ALL otherwise"
     group_label: "Bots"
@@ -767,6 +806,7 @@ view: page_views {
   }
 
   dimension: refr_urlscheme {
+    hidden: yes
     label: "refr_urlscheme"
     description: "Referer scheme e.g. ‘http’"
     group_label: "Referrer"
@@ -783,6 +823,7 @@ view: page_views {
   }
 
   dimension_group: start_tstamp {
+    hidden: yes
     label: "start_tstamp"
     description: "Timestamp for the start of the page view, based on derived_tstamp"
     group_label: "Time Stamp"
@@ -868,6 +909,7 @@ view: page_views {
   }
 
   dimension: vertical_percentage_scrolled {
+    hidden: yes
     label: "vertical_percentage_scrolled"
     description: "Percentage of page scrolled vertically"
     group_label: "Page Scroll"
@@ -876,6 +918,7 @@ view: page_views {
   }
 
   dimension: vertical_pixels_scrolled {
+    hidden: yes
     label: "vertical_pixels_scrolled"
     description: "Distance the user scrolled vertically in pixels"
     group_label: "Page Scroll"
@@ -908,6 +951,7 @@ view: page_views {
   }
 
   dimension: user_engaged {
+    hidden: yes
     label: "user_engaged"
     type: yesno
     description: "If the user engaged for a certain amount of time and page views"
@@ -916,72 +960,72 @@ view: page_views {
   }
 
 
-  dimension: direct_search {
-    label: "direct_search"
-    group_label: "Traffic"
-    type: yesno
-    sql: ${refr_medium} = null and ${page_url} not like '%utm_%' ;;
-  }
+  # dimension: direct_search {
+  #   label: "direct_search"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: ${refr_medium} = null and ${page_url} not like '%utm_%' ;;
+  # }
 
-  dimension: organic_search {
-    label: "organic_search"
-    group_label: "Traffic"
-    type: yesno
-    sql: (${refr_medium} = 'search' and ${mkt_medium} is null) OR (${refr_medium} = 'search' and ${mkt_medium} = 'organic') ;;
-  }
+  # dimension: organic_search {
+  #   label: "organic_search"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: (${refr_medium} = 'search' and ${mkt_medium} is null) OR (${refr_medium} = 'search' and ${mkt_medium} = 'organic') ;;
+  # }
 
-  dimension: Paid_Search {
-    label: "Paid_Search"
-    group_label: "Traffic"
-    type: yesno
-    sql: ${refr_medium} = 'search' and  ${mkt_medium} like '%(cpc|ppc|paidsearch)%' ;;
-  }
+  # dimension: Paid_Search {
+  #   label: "Paid_Search"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: ${refr_medium} = 'search' and  ${mkt_medium} like '%(cpc|ppc|paidsearch)%' ;;
+  # }
 
-  dimension: Social {
-    label: "Social"
-    group_label: "Traffic"
-    type: yesno
-    sql: ${refr_medium} = 'social' or ${mkt_medium} like '%(social|social-network|social-media|sm|social network|social media)%' ;;
-  }
+  # dimension: Social {
+  #   label: "Social"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: ${refr_medium} = 'social' or ${mkt_medium} like '%(social|social-network|social-media|sm|social network|social media)%' ;;
+  # }
 
-  dimension: email {
-    label: "email"
-    group_label: "Traffic"
-    type: yesno
-    sql: ${refr_medium} = 'email' or ${mkt_medium} like 'email' ;;
-  }
+  # dimension: email {
+  #   label: "email"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: ${refr_medium} = 'email' or ${mkt_medium} like 'email' ;;
+  # }
 
-  dimension: display {
-    label: "display"
-    group_label: "Traffic"
-    type: yesno
-    sql: ${mkt_medium} like '%(display|cpm|banner)%' ;;
-  }
+  # dimension: display {
+  #   label: "display"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: ${mkt_medium} like '%(display|cpm|banner)%' ;;
+  # }
 
-  dimension: advertising {
-    label: "advertising"
-    group_label: "Traffic"
-    type: yesno
-    sql: ${mkt_medium} like '%(cpv|cpa|cpp|content-text|advertising|ads)%' ;;
-  }
+  # dimension: advertising {
+  #   label: "advertising"
+  #   group_label: "Traffic"
+  #   type: yesno
+  #   sql: ${mkt_medium} like '%(cpv|cpa|cpp|content-text|advertising|ads)%' ;;
+  # }
 
-  dimension: traffic_type {
-    label: "traffic_type"
-    group_label: "Traffic"
-    type: string
-    description: "Type of traffic"
-    sql:
-        CASE WHEN ${refr_medium} IS NULL AND ${page_url} NOT LIKE '%utm_%' THEN 'Direct Search'
-             WHEN ((LOWER(${refr_medium}) = 'search' and ${mkt_medium} IS NULL) OR (LOWER(${refr_medium}) = 'search' AND LOWER(${mkt_medium}) = 'organic')) THEN 'Organic Search'
-             WHEN LOWER(${refr_medium}) = 'search' AND  LOWER(${mkt_medium}) LIKE '%(cpc|ppc|paidsearch)%' THEN 'Paid Search'
-             WHEN LOWER(${refr_medium}) = 'social' OR LOWER(${mkt_medium}) LIKE '%(social|social-network|social-media|sm|social network|social media)%' THEN 'Social'
-             WHEN LOWER(${refr_medium}) = 'email' or LOWER(${mkt_medium}) LIKE 'email' THEN 'Email'
-             WHEN LOWER(${mkt_medium}) LIKE '%(display|cpm|banner)%' THEN 'Display'
-             WHEN LOWER(${mkt_medium}) LIKE '%(cpv|cpa|cpp|content-text|advertising|ads)%' THEN 'Advertising'
-             ELSE 'Other'
-             END
-    ;;
-  }
+  # dimension: traffic_type {
+  #   label: "traffic_type"
+  #   group_label: "Traffic"
+  #   type: string
+  #   description: "Type of traffic"
+  #   sql:
+  #       CASE WHEN ${refr_medium} IS NULL AND ${page_url} NOT LIKE '%utm_%' THEN 'Direct Search'
+  #           WHEN ((LOWER(${refr_medium}) = 'search' and ${mkt_medium} IS NULL) OR (LOWER(${refr_medium}) = 'search' AND LOWER(${mkt_medium}) = 'organic')) THEN 'Organic Search'
+  #           WHEN LOWER(${refr_medium}) = 'search' AND  LOWER(${mkt_medium}) LIKE '%(cpc|ppc|paidsearch)%' THEN 'Paid Search'
+  #           WHEN LOWER(${refr_medium}) = 'social' OR LOWER(${mkt_medium}) LIKE '%(social|social-network|social-media|sm|social network|social media)%' THEN 'Social'
+  #           WHEN LOWER(${refr_medium}) = 'email' or LOWER(${mkt_medium}) LIKE 'email' THEN 'Email'
+  #           WHEN LOWER(${mkt_medium}) LIKE '%(display|cpm|banner)%' THEN 'Display'
+  #           WHEN LOWER(${mkt_medium}) LIKE '%(cpv|cpa|cpp|content-text|advertising|ads)%' THEN 'Advertising'
+  #           ELSE 'Other'
+  #           END
+  #   ;;
+  # }
 
   # Measures
 
@@ -1012,7 +1056,7 @@ view: page_views {
 
   measure: user_details {
     type: count
-    drill_fields: [user_details*]
+    # drill_fields: [user_details*]
     hidden: yes
   }
   set: user_details {
@@ -1118,15 +1162,35 @@ view: page_views {
     ]
   }
 
-  measure: total_user_bounced {
-    label: "total_user_bounced"
+  measure: total_bounces {
+    label: "total_bounces"
     type: count_distinct
     description: "Total Number of User bounced"
     group_label: "Count"
-    sql: ${user_bounced} ;;
+    sql: ${page_view_id} ;;
     filters: [
-      user_bounced: "Yes"
+      page_views_in_session: "1"
     ]
+  }
+
+  measure: entrances {
+    label: "entrances"
+    type: count_distinct
+    description: "Total Number of User bounced"
+    group_label: "Count"
+    sql:${page_view_id} ;;
+    filters: [
+      page_view_in_session_index: "1"
+    ]
+  }
+
+  measure: entrances_pct {
+    label: "entrance %"
+    type: number
+    description: "% of sessions that started browsing on the page"
+    group_label: "Count"
+    sql:100*${entrances} / ${session_count} ;;
+    value_format: "0.0\"%\""
   }
 
   measure: user_bounced_rate {
@@ -1134,8 +1198,17 @@ view: page_views {
     type: number
     group_label: "Engagement"
     description: "Rate of user bounced"
-    sql: (${total_user_bounced}/${user_count})*100 ;;
-    value_format: "0.00\"%\""
+    sql: (${total_bounces}/${user_count})*100 ;;
+    value_format: "0.0\"%\""
+  }
+
+  measure: session_bounced_rate {
+    label: "session_bounced_rate"
+    type: number
+    group_label: "Engagement"
+    description: "Rate of user bounced"
+    sql: 100*${total_bounces}/NULLIF(${entrances},0) ;;
+    value_format: "0.0\"%\""
   }
 
   dimension: enagagement_score {
@@ -1210,62 +1283,70 @@ view: page_views {
     ]
     drill_fields: [user_details*]
   }
-  measure: total_direct_traffic {
-    label: "total_direct_traffic"
-    description: "Total Traffic from Direct Search"
-    group_label: "Traffic Count"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Direct Search' THEN ${domain_userid} ELSE NULL END ;;
+  measure: avg_vertical_percentage_scrolled {
+    label: "average scroll rate"
+    type: average_distinct
+    sql: vertical_percentage_scrolled  ;;
+    value_format: "0.0\"%\""
+
   }
 
+  # measure: total_direct_traffic {
+  #   label: "total_direct_traffic"
+  #   description: "Total Traffic from Direct Search"
+  #   group_label: "Traffic Count"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Direct Search' THEN ${domain_userid} ELSE NULL END ;;
+  # }
 
-  measure: total_organic_traffic{
-    label: "total_organic_traffic"
-    group_label: "Traffic Count"
-    description: "Total number of organic traffic"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Organic Search' THEN ${domain_userid} ELSE NULL END ;;
-  }
 
-  measure: total_paid_traffic {
-    label: "total_paid_traffic"
-    group_label: "Traffic Count"
-    description: "Total traffic coming from paid sources"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Paid Search' THEN ${domain_userid} ELSE NULL END ;;
-  }
+  # measure: total_organic_traffic{
+  #   label: "total_organic_traffic"
+  #   group_label: "Traffic Count"
+  #   description: "Total number of organic traffic"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Organic Search' THEN ${domain_userid} ELSE NULL END ;;
+  # }
 
-  measure: total_social_traffic {
-    label: "total_social_traffic"
-    group_label: "Traffic Count"
-    description: "Total traffic coming from search"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Social' THEN ${domain_userid} ELSE NULL END ;;
-  }
+  # measure: total_paid_traffic {
+  #   label: "total_paid_traffic"
+  #   group_label: "Traffic Count"
+  #   description: "Total traffic coming from paid sources"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Paid Search' THEN ${domain_userid} ELSE NULL END ;;
+  # }
 
-  measure: total_email_traffic {
-    label: "total_email_traffic"
-    group_label: "Traffic Count"
-    description: "Total number of traffic coming from email"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Email' THEN ${domain_userid} ELSE NULL END ;;
-  }
+  # measure: total_social_traffic {
+  #   label: "total_social_traffic"
+  #   group_label: "Traffic Count"
+  #   description: "Total traffic coming from search"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Social' THEN ${domain_userid} ELSE NULL END ;;
+  # }
 
-  measure: total_display_traffic {
-    label: "total_display_traffic"
-    group_label: "Traffic Count"
-    description: "Total traffic coming from display advert"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Display' THEN ${domain_userid} ELSE NULL END ;;
-  }
+  # measure: total_email_traffic {
+  #   label: "total_email_traffic"
+  #   group_label: "Traffic Count"
+  #   description: "Total number of traffic coming from email"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Email' THEN ${domain_userid} ELSE NULL END ;;
+  # }
 
-  measure: total_advert_traffic {
-    label: "total_advert_traffic"
-    group_label: "Traffic Count"
-    description: "Total traffic coming from advertisement"
-    type: count_distinct
-    sql: CASE WHEN ${traffic_type}='Advertising' THEN ${domain_userid} ELSE NULL END ;;
-  }
+  # measure: total_display_traffic {
+  #   label: "total_display_traffic"
+  #   group_label: "Traffic Count"
+  #   description: "Total traffic coming from display advert"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Display' THEN ${domain_userid} ELSE NULL END ;;
+  # }
+
+  # measure: total_advert_traffic {
+  #   label: "total_advert_traffic"
+  #   group_label: "Traffic Count"
+  #   description: "Total traffic coming from advertisement"
+  #   type: count_distinct
+  #   sql: CASE WHEN ${traffic_type}='Advertising' THEN ${domain_userid} ELSE NULL END ;;
+  # }
 
   measure: total_page_views {
     label: "total_page_views"
