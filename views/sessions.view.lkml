@@ -1,7 +1,8 @@
 view: sessions {
   label: "Sessions"
   # sql_table_name: @{schema}.@{sessions_table} ;;
-  sql_table_name: @{schema}.@{sessions_table} ;;
+  # sql_table_name: @{schema}.@{sessions_table} ;;
+  sql_table_name: "DBT_CALUM"."SNOWPLOW_WEB_SESSIONS_THIS_RUN" ;;
 
   drill_fields: [domain_sessionidx]
 
@@ -738,6 +739,15 @@ view: sessions {
     sql: ${TABLE}.user_id ;;
   }
 
+  dimension: stitched_user_id {
+    label: "stitched_user_id"
+    description: "Stitched User ID"
+    group_label: "User"
+    type: string
+    # hidden: yes
+    sql: ${TABLE}.stitched_user_id ;;
+  }
+
 
 # User Agent
   dimension: user_ipaddress {
@@ -835,6 +845,14 @@ view: sessions {
     description: "If the user engaged for a certain amount of time and page views"
     sql: ${engaged_time_in_s} >= 60 AND ${page_views} >= 3 ;;
     group_label: "Engaged Time"
+  }
+
+# Channel
+
+  dimension: channel {
+    label: "Channel"
+    type: string
+    sql: CASE WHEN ${TABLE}."CHANNEL" is not null then ${TABLE}."CHANNEL" end;;
   }
 
 # Measures

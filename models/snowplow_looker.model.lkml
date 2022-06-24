@@ -13,14 +13,14 @@ include: "/views/*.view"
 
 explore: events {}
 
-# explore: sessions {
-#   label: "Sessions"
-#   join: users {
-#     type: left_outer
-#     sql_on: ${sessions.domain_userid} = ${users.domain_userid} ;;
-#     relationship: many_to_one
-#   }
-# }
+explore: sessions {
+  label: "Sessions"
+  join: users {
+    type: left_outer
+    sql_on: ${sessions.domain_userid} = ${users.domain_userid} ;;
+    relationship: many_to_one
+  }
+}
 
 # explore: page_views {
 #   label: "Website Analytics"
