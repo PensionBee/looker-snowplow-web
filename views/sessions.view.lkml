@@ -1,8 +1,6 @@
 view: sessions {
   label: "Sessions"
-  # sql_table_name: @{schema}.@{sessions_table} ;;
   sql_table_name: @{schema}.@{sessions_table} ;;
-
   drill_fields: [domain_sessionidx]
 
 
@@ -873,7 +871,7 @@ view: sessions {
     label: "user_bounced"
     type: yesno
     description: "User stopped the activity and left the page"
-    sql: ${page_views} =1;;
+    sql: ${page_views} =1 and ${engaged_time_in_s} = 0 ;;
     group_label: "User"
   }
 
@@ -902,29 +900,8 @@ view: sessions {
     group_label: "Session"
     description: "whether the session is first session or not"
     sql: ${domain_sessionidx} = 1 ;;
-    }
+  }
 
-  dimension: cl_conversion {
-    label: "CL conversion"
-    type: number
-    # group_label: "Conversion"
-    # description: ""
-    sql: ${TABLE}."CL_CONVERSION" ;;
-  }
-  dimension: rc_conversion {
-    label: "CL conversion"
-    type: number
-    # group_label: "Conversion"
-    # description: ""
-    sql: ${TABLE}."IL_CONVERSION" ;;
-  }
-  dimension: pa_subscription {
-    label: "PA subscription"
-    type: number
-    # group_label: "Conversion"
-    # description: ""
-    sql: ${TABLE}."PA_SUBSCRIPTION" ;;
-  }
 
   # Measure
 
@@ -953,62 +930,6 @@ view: sessions {
     group_label: "Count"
     sql: ${session_count}/${user_count} ;;
     value_format_name: decimal_2
-  }
-
-
-  measure: cl_conversions {
-    label: "CL conversions"
-    type: count_distinct
-    description: "average session per user"
-    group_label: "Conversion"
-    sql: ${domain_sessionid} ;;
-    filters: [cl_conversion: "1"]
-      }
-  measure: rc_conversions {
-    label: "RC conversions"
-   type: count_distinct
-    description: "average session per user"
-    group_label: "Conversion"
-    sql: ${domain_sessionid} ;;
-    filters: [rc_conversion: "1"]
-  }
-
-  measure: pa_subscriptions {
-    label: "P.A. subscriptions"
-   type: count_distinct
-    description: "average session per user"
-    group_label: "Conversion"
-    sql: ${domain_sessionid} ;;
-    filters: [pa_subscription: "1"]
-  }
-
-
-
-
-  measure: cl_conversion_rate {
-    label: "CL conversion rate %"
-    type: number
-    description: "average session per user"
-    group_label: "Conversion"
-
-    sql: ${cl_conversions}/${session_count} ;;
-    value_format: "0.0\"%\""
-  }
-  measure: rc_conversion_rate {
-    label: "RC conversion rate %"
-    type: number
-    description: "average session per user"
-    group_label: "Conversion"
-    sql: ${rc_conversions}/${session_count} ;;
-    value_format: "0.0\"%\""
-  }
-  measure: pa_subscription_rate {
-    label: "P.A. subscription rate %"
-    type: number
-    description: "average session per user"
-    group_label: "Conversion"
-    sql: ${pa_subscriptions}/${session_count} ;;
-    value_format: "0.0\"%\""
   }
 
 }
